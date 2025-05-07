@@ -8,7 +8,22 @@ router.get('/users', (req, res) => {
 
 router.get('/users/:userId', (req, res) => {
     const {userId} = req.params
-    res.send('obteniendo usuarios')
+    res.send('obteniendo usuario' + userId)
+})
+
+router.post('/users', (req, res) => {
+    const {userId} = req.params
+    res.send('creando usuario')
+})
+
+router.delete('/users/:userId', (req, res) => {
+    const {userId} = req.params
+    res.send('eliminando usuario' + userId)
+})
+
+router.put('/users/:userId', (req, res) => {
+    const {userId} = req.params
+    res.send('actualizando usuario' + userId)
 })
 
 
