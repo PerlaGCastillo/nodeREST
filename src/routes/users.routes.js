@@ -1,31 +1,27 @@
 import {Router} from 'express'
 
-const router = Router()
+const router = Router();
 
-router.get('/users', (req, res) => {
-    res.send('obteniendo usuarios')
-})
+router.get('/users', (req, res)=> {
+        res.send('obteniendo usuarios')
+    })
 
-router.get('/users/:userId', (req, res) => {
-    const {userId} = req.params
-    res.send('obteniendo usuario' + userId)
-})
+router.get('/users/:userid', (req, res)=> {
+    const {userid} = req.params
+    res.send('obteniendo usuario')
+    })
 
-router.post('/users', (req, res) => {
-    const {userId} = req.params
-    res.send('creando usuario')
-})
+router.post('/users/:userid', (req, res)=> {
+    const {userid} = req.params
+    res.send('creando usuario' + id)
+    })
 
-router.delete('/users/:userId', (req, res) => {
-    const {userId} = req.params
-    res.send('eliminando usuario' + userId)
-})
+router.delete('/users/:userid', (req, res)=> {
+    res.send(id + 'usuario eliminado')
+    })
 
-router.put('/users/:userId', (req, res) => {
-    const {userId} = req.params
-    res.send('actualizando usuario' + userId)
-})
-
-
+router.put('/users/:userid', (req, res)=> {
+    res.send('editando usuario')
+    })
 
 export default router
